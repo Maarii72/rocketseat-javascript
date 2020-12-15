@@ -19,7 +19,24 @@
 
 <script>
     var nomes = ["Diego", "Gabriel", "Lucas"];
-    
+    let lista = document. querySelector('ul')
+
+   for(var i = 0; i < nomes.length; i++){
+
+    /*
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    */
+   let liElement = document.createElement('li')
+   let nomeElement = document.createTextNode(nomes[i])
+   liElement.appendChild(nomeElement)
+   lista.appendChild(liElement)
+   }
+
+
 </script>
     
 </body>
