@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+   
+</head>
+<body>
+     <!--Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+         algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+    -->
+    <input type="button" class="btn" value="Novo elemento">
+    <div class="box" onmouseover="trocarCor()">
+
+    </div>
+
+    <script>
+        let botao = document.querySelector('.btn')
+        let elemento = document.querySelector('.box')
+
+         // função troca de cor
+         function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+        //fim função troca de cor
+
+        //onclick
+        botao.onclick = function(){
+            elemento.style.width = '100px';
+            elemento.style.height = '100px';
+            elemento.style.backgroundColor = 'red';
+           
+        }
+            
+        function trocarCor(){
+            let elemento =document.querySelector('.box')
+            elemento.style.backgroundColor =getRandomColor()
+        }
+        
+       
+    </script>
+    
+</body>
+</html>
